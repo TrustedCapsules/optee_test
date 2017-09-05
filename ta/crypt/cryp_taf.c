@@ -182,7 +182,7 @@ TEE_Result ta_entry_cipher_init(uint32_t param_type, TEE_Param params[4])
 	} else
 		return TEE_ERROR_BAD_PARAMETERS;
 
-	TEE_CipherInit(op, buffer, size);
+	TEE_CipherInit(op, buffer, size, 0);
 	return TEE_SUCCESS;
 }
 

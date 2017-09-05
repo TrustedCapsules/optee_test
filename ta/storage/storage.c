@@ -379,7 +379,7 @@ TEE_Result ta_storage_cmd_key_in_persistent(uint32_t param_types,
 		goto cleanup4;
 	}
 
-	TEE_CipherInit(encrypt_op, IV, IVlen);
+	TEE_CipherInit(encrypt_op, IV, IVlen, 0);
 	TEE_Free(IV);
 
 cleanup4:

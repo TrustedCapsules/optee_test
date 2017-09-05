@@ -261,9 +261,9 @@ TEE_Result cmd_prepare_key(uint32_t param_types, TEE_Param params[4])
 	TEE_FreeTransientObject(hkey);
 
 	if (use_iv)
-		TEE_CipherInit(crypto_op, iv, sizeof(iv));
+		TEE_CipherInit(crypto_op, iv, sizeof(iv), 0);
 	else
-		TEE_CipherInit(crypto_op, NULL, 0);
+		TEE_CipherInit(crypto_op, NULL, 0, 0);
 
 	return TEE_SUCCESS;
 }
